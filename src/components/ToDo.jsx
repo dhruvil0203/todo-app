@@ -56,7 +56,11 @@ const ToDo = () => {
   return (
     <div className="place-self-center w-full sm:w-9/12 max-w-md flex flex-col p-5 sm:p-7 min-h-[380px] rounded-xl bg-white">
       <div className="flex items-center mt-7 gap-2">
-        <img src="/todo_icon.png" alt="TO-DO Image" className="h-7 w-7" />
+        <img
+          src="/checklist_10552402.png"
+          alt="TO-DO Image"
+          className="h-7 w-7 mt-1.5 ml-2.5"
+        />
         <h1 className="font-semibold text-3xl">To-Do List</h1>
       </div>
 
