@@ -1,21 +1,19 @@
 import React from "react";
-import tick from "../../public/tick.png";
-import untick from "../../public/not_tick.png";
-import deleteidcon from "../../public/delete.png";
+
 const ToDoItem = ({ text, deleteTodo, id, toggle, iscomplete }) => {
+  const tick = "/tick.png";
+  const untick = "/not_tick.png";
+  const deleteicon = "/delete.png";
+
   return (
     <div className="flex items-center my-3 gap-2">
       <div
         onClick={() => {
           toggle(id);
         }}
-        className="flex flex-1 item-center cursor-pointer"
+        className="flex flex-1 items-center cursor-pointer"
       >
-        <img
-          src={iscomplete ? tick : untick}
-          alt="Tick Image"
-          className="w-7"
-        />
+        <img src={iscomplete ? tick : untick} alt="Tick Icon" className="w-7" />
         <p
           className={`text-slate-700 ml-4 text-[17px] ${
             iscomplete ? "line-through" : ""
@@ -25,8 +23,8 @@ const ToDoItem = ({ text, deleteTodo, id, toggle, iscomplete }) => {
         </p>
       </div>
       <img
-        src={deleteidcon}
-        alt="Tick Image"
+        src={deleteicon}
+        alt="Delete Icon"
         className="w-4 cursor-pointer"
         onClick={() => {
           deleteTodo(id);
