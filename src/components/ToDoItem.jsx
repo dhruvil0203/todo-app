@@ -1,7 +1,7 @@
 import React from "react";
-import tick from "../../assets/tick.png";
-import untick from "../../assets/not_tick.png";
-import deleteidcon from "../../assets/delete.png";
+import tick from "../../public/tick.png";
+import untick from "../../public/not_tick.png";
+import deleteidcon from "../../public/delete.png";
 const ToDoItem = ({ text, deleteTodo, id, toggle, iscomplete }) => {
   return (
     <div className="flex items-center my-3 gap-2">
