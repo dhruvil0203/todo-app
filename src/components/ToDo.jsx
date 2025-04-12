@@ -41,6 +41,17 @@ const ToDo = () => {
       prevTodos.filter((todo) => todo.id !== id)
     );
   };
+  const editTodo = (id, newText) => {
+    setTodoList((prevTodo) =>
+      prevTodo.map((todoitem) => {
+        if (todoitem.id === id) {
+          return { ...todoitem, text: newText };
+        }
+        return todoitem;
+      })
+    );
+  };
+
   const toggle = (id) => {
     setTodoList((prevTodo) => {
       return prevTodo.map((todoitem) => {
@@ -92,6 +103,7 @@ const ToDo = () => {
               iscomplete={item.iscomplete}
               deleteTodo={deleteTodo}
               toggle={toggle}
+              editTodo={editTodo}
             />
           );
         })}
