@@ -1,11 +1,14 @@
 import React from "react";
+import { ThemeProvider } from "../src/context/ThemeProvider";
 import ToDo from "./components/ToDo";
 
 const App = () => {
   return (
-    <div className="bg-stone-900 min-h-screen grid py-4">
-      <ToDo />
-    </div>
+    <>
+      <ThemeProvider>
+        <ToDo />
+      </ThemeProvider>
+    </>
   );
 };
 
