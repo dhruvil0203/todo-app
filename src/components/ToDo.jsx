@@ -85,7 +85,9 @@ const ToDo = () => {
         }`}
       >
         <button
-          className="self-end bg-gray-300 hover:bg-gray-400 text-black dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600 rounded-full w-10 h-10 flex items-center justify-center text-xl transition duration-200"
+          className={`self-end rounded-full w-10 h-10 flex items-center justify-center text-xl transition duration-200 ${
+            theme === "dark" ? "bg-gray-900" : "bg-gray-200"
+          }`}
           onClick={handleToggleTheme}
         >
           {theme === "dark" ? "☀️" : "🌙"}
